@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+
 
 export default function Footer() {
   return (
@@ -16,7 +18,8 @@ export default function Footer() {
         <div>
           <h3 className="text-md font-semibold mb-2">Company</h3>
           <ul className="space-y-1 text-sm text-gray-400">
-            <li>About Us</li>
+           <li>
+            <Link to="/about" className="hover:text-blue-400">About Us</Link></li>
             <li>Careers</li>
             <li>Blogs</li>
             <li>Contact Us</li>

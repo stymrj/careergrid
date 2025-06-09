@@ -15,6 +15,9 @@ import Blogs from "./pages/Blogs";
 import Products from "./pages/Products";
 import AiTools from "./pages/AiTools";
 import Roadmaps from './pages/Roadmaps';
+import About from './pages/About';
+import { Link } from 'react-router-dom';
+
 
 // Auth Pages
 // ✅ Clean imports
@@ -22,7 +25,6 @@ import BlogList from './pages/blogs/BlogList';
 import BlogDetail from './pages/blogs/BlogDetail';
 import Login from './pages/auth/Login';
 import Profile from './pages/auth/Profile';
-
 
 export default function App() {
   return (
@@ -48,6 +50,10 @@ export default function App() {
         {/* Blogs */}
         <Route path="/blogs" element={<BlogList />} />
         <Route path="/blogs/:slug" element={<BlogDetail />} />
+
+        <Route path="/about" element={<About />} />
+        
+
       </Routes>
 
       {/* Footer always visible */}
