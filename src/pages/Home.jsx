@@ -16,20 +16,20 @@ export default function Home() {
         </p>
 
         <a
-          href="https://discord.gg/invite-link"
+          href="https://whatsapp.com/channel/0029VaccquKFHWq514zVzA35"
           target="_blank"
           rel="noopener noreferrer"
           className="mt-6 px-6 py-2 text-green-500 border border-green-500 rounded-full hover:bg-green-500 hover:text-white flex items-center gap-2"
         >
-          Become a member <FaDiscord className="text-xl" />
+          Become a member <FaWhatsapp className="text-xl" />
         </a>
 
         <div className="flex justify-center gap-6 mt-6 text-2xl">
-          <a href="https://wa.me/your-number" target="_blank" rel="noopener noreferrer" className="hover:text-green-500"><FaWhatsapp /></a>
-          <a href="https://t.me/your-channel" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400"><FaTelegramPlane /></a>
-          <a href="https://www.linkedin.com/in/your-profile" target="_blank" rel="noopener noreferrer" className="hover:text-blue-700"><FaLinkedinIn /></a>
-          <a href="https://www.youtube.com/@your-channel" target="_blank" rel="noopener noreferrer" className="hover:text-red-500"><FaYoutube /></a>
-          <a href="https://discord.gg/invite-link" target="_blank" rel="noopener noreferrer" className="hover:text-indigo-500"><FaDiscord /></a>
+          <a href="https://wa.me/+917091298828" target="_blank" rel="noopener noreferrer" className="hover:text-green-500"><FaWhatsapp /></a>
+          <a href="https://t.me/stymrj" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400"><FaTelegramPlane /></a>
+          <a href="https://www.linkedin.com/in/careergrid" target="_blank" rel="noopener noreferrer" className="hover:text-blue-700"><FaLinkedinIn /></a>
+          <a href="https://www.youtube.com/@satyam_gupta_vlogs" target="_blank" rel="noopener noreferrer" className="hover:text-red-500"><FaYoutube /></a>
+          <a href="#" target="_blank" rel="noopener noreferrer" className="hover:text-indigo-500"><FaDiscord /></a>
         </div>
       </section>
     </div>

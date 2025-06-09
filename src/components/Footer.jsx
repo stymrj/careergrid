@@ -27,7 +27,8 @@ export default function Footer() {
         <div>
           <h3 className="text-md font-semibold mb-2">Location</h3>
           <ul className="space-y-1 text-sm text-gray-400">
-            <li>Noida,Uttar Pradesh, India</li>
+            <li>Noida, Uttar Pradesh, India</li>
+            <li>+917091298828</li>
             <li>Email: <a href="mailto:careergrid24@gmail.com" className="hover:text-blue-400">careergrid24@gmail.com</a></li>
           </ul>
         </div>
