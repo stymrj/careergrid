@@ -7,7 +7,7 @@ export default function Home() {
       <section className="snap-start min-h-screen flex flex-col justify-center items-center text-center px-4 bg-[#f5f5f5]">
         <p className="text-gray-600 text-sm md:text-base mb-2">Empowering Students for Career Success</p>
         <h1 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
-          Join <span className="text-red-500">1000+</span> Engineers<br />
+          Join <span className="text-red-500">CareerGrid</span>!<br />
           <span className="text-green-500">Preparing for Jobs, Internships & More</span>
         </h1>
         <p className="mt-4 text-gray-500 text-sm">
