@@ -18,6 +18,9 @@ import Roadmaps from './pages/Roadmaps';
 import About from './pages/About';
 import Careers from './pages/Careers';
 import Contact from './pages/Contact';
+import Signup from './pages/auth/Signup';
+import Dashboard from './pages/auth/Dashboard';
+
 
 
 
@@ -49,6 +52,9 @@ export default function App() {
         {/* Auth */}
         <Route path="/login" element={<Login />} />
         <Route path="/profile" element={<Profile />} />
+        <Route path="/signup" element={<Signup />} />
+        <Route path="/dashboard" element={<Dashboard />} />
+
 
         {/* Blogs */}
         <Route path="/blogs" element={<BlogList />} />
