@@ -16,7 +16,11 @@ import Products from "./pages/Products";
 import AiTools from "./pages/AiTools";
 import Roadmaps from './pages/Roadmaps';
 import About from './pages/About';
-import { Link } from 'react-router-dom';
+import Careers from './pages/Careers';
+import Contact from './pages/Contact';
+import Signup from './pages/auth/Signup';
+
+
 
 
 // Auth Pages
@@ -45,14 +49,20 @@ export default function App() {
 
         {/* Auth */}
         <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<Signup />} />
         <Route path="/profile" element={<Profile />} />
 
         {/* Blogs */}
         <Route path="/blogs" element={<BlogList />} />
         <Route path="/blogs/:slug" element={<BlogDetail />} />
 
+        {/* Routes for the Footer Functions */}
+
         <Route path="/about" element={<About />} />
-        
+        <Route path="/about" element={<About />} />
+        <Route path="/careers" element={<Careers />} />
+        <Route path="/blogs" element={<Blogs />} />
+        <Route path="/contact" element={<Contact />} />
 
       </Routes>
 

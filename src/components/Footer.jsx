@@ -15,16 +15,28 @@ export default function Footer() {
         </div>
 
         {/* Column 2 */}
-        <div>
-          <h3 className="text-md font-semibold mb-2">Company</h3>
-          <ul className="space-y-1 text-sm text-gray-400">
-           <li>
-            <Link to="/about" className="hover:text-blue-400">About Us</Link></li>
-            <li>Careers</li>
-            <li>Blogs</li>
-            <li>Contact Us</li>
-          </ul>
-        </div>
+<div>
+  <h3 className="text-md font-semibold mb-2">Company</h3>
+  <ul className="space-y-1 text-sm text-gray-400">
+    <li>
+      <Link to="/about" className="hover:text-blue-400">About Us</Link>
+    </li>
+    <li>
+      <Link to="/careers" className="hover:text-blue-400">Careers</Link>
+    </li>
+    <li>
+      <Link to="/blogs" className="hover:text-blue-400">Blogs</Link>
+    </li>
+    <li>
+      <Link to="/contact" className="hover:text-blue-400">Contact Us</Link>
+    </li>
+    <li>
+    <Link to="/signup" className="text-sm hover:text-green-500">Sign Up</Link>
+    </li>
+  </ul>
+</div>
+
+       
 
         {/* Column 3 */}
         <div>

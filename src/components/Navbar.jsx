@@ -23,8 +23,8 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between">
         {/* Logo */}
         <Link to="/" className="text-[22px] sm:text-2xl font-extrabold tracking-tight font-mono text-gray-900 flex items-center gap-2">
-          <span className="text-indigo-600">&lt;/&gt;</span>
-          <span>Career<span className="text-indigo-600">Grid</span></span>
+          <span className="text-green-600">&lt;/&gt;</span>
+          <span>Career<span className="text-green-600">Grid</span></span>
         </Link>
 
         {/* Desktop Navigation */}
