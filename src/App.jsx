@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
+
 // Page Routes
 import Home from "./pages/Home";
 import Learn from "./pages/Learn";
@@ -69,6 +70,7 @@ export default function App() {
         <Route path="/careers" element={<Careers />} />
         <Route path="/blogs" element={<Blogs />} />
         <Route path="/contact" element={<Contact />} />
+
 
       </Routes>
 
