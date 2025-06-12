@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
+
 // Core Layout Components
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
@@ -48,6 +49,7 @@ export default function App() {
         <Route path="/products" element={<Products />} />
         <Route path="/aitools" element={<AiTools />} />
         <Route path="/roadmaps" element={<Roadmaps />} />
+        
 
         {/* Auth */}
         <Route path="/login" element={<Login />} />

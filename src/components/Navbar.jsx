@@ -14,7 +14,7 @@ export default function Navbar() {
     { name: 'Jobs', icon: '💼', path: '/jobs' },
     { name: 'Blogs', icon: '📰', path: '/blogs' },
     { name: 'Products', icon: '🛍️', path: '/products' },
-    { name: 'AI Tools', icon: '🤖', path: '/aitools' },
+    { name: 'Subscriptions', icon: '🤖', path: '/aitools' },
     { name: 'Login', icon: '🔐', path: '/login' },
   ];
 
