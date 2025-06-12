@@ -12,10 +12,10 @@ const app = express();
 const allowedOrigins = [
   'http://localhost:5173',
   'https://careergrid.tech',
-  'https://www.careergrid.tech' // Also include with www
+  'https://www.careergrid.tech'
 ];
 
-// CORS middleware
+// CORS config
 app.use(cors({
   origin: function (origin, callback) {
     if (!origin || allowedOrigins.includes(origin)) {
@@ -27,7 +27,6 @@ app.use(cors({
   credentials: true
 }));
 
-// Handle preflight requests for all routes
 app.options('*', cors({
   origin: function (origin, callback) {
     if (!origin || allowedOrigins.includes(origin)) {
@@ -41,10 +40,13 @@ app.options('*', cors({
 
 app.use(express.json());
 
-// Routes
+// Base route
 app.get('/', (_, res) => res.send('✅ Backend running'));
+
+// Routes
 app.use('/api/auth', require('./routes/authRoutes'));
 app.use('/api/user', require('./routes/userRoutes'));
+app.use('/api/blogs', require('./routes/blogs')); // ✅ ADD THIS LINE
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`🚀 Server running at http://localhost:${PORT}`));
