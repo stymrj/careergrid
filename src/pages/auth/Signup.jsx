@@ -1,6 +1,6 @@
 // src/pages/auth/Signup.jsx
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 
 export default function Signup() {
   const navigate = useNavigate();
@@ -57,6 +57,12 @@ export default function Signup() {
           <button className="w-full bg-green-600 hover:bg-green-700 text-white font-semibold py-2 rounded transition">
             Sign Up
           </button>
+           <p className="mt-4 text-center text-sm text-gray-500">
+            Already have an account?{' '}
+            <Link to="/login" className="text-green-600 font-semibold hover:underline">
+              Log In
+            </Link>
+          </p>
         </form>
       </div>
     </div>

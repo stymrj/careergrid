@@ -6,6 +6,10 @@ require('dotenv').config(); // to load variables from .env
 const app = express();
 const PORT = process.env.PORT || 5000;
 
+const connectDB = require('./config/db');
+connectDB(); // 🔌 Connect to MongoDB
+
+
 // ✅ Middleware
 app.use(cors({
   origin: ['http://localhost:5173', 'https://careergrid.in'],
