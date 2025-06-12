@@ -1,33 +1,17 @@
 const express = require('express');
 const cors = require('cors');
 require('dotenv').config();
-
 const connectDB = require('./config/db');
-const blogRoutes = require('./routes/blogs');
-const contactRoutes = require('./routes/contact');
-const paymentRoutes = require('./routes/payment');
 
 const app = express();
-const PORT = process.env.PORT || 5000;
-
-// Connect to MongoDB
 connectDB();
 
-// Middleware
-app.use(cors({
-  origin: ['http://localhost:5173', 'https://careergrid.in'],
-  methods: ['GET', 'POST'],
-  allowedHeaders: ['Content-Type']
-}));
+app.use(cors());
 app.use(express.json());
 
-// Routes
-app.get('/', (req, res) => res.send('✅ Server is up and running!'));
-app.use('/api/blogs', blogRoutes);
-app.use('/api/contact', contactRoutes);
-app.use('/api/payment-success', paymentRoutes);
+app.use('/api/auth', require('./routes/authRoutes'));
+app.use('/api/user', require('./routes/userRoutes'));
 
-// Start Server
-app.listen(PORT, () => {
-  console.log(`🚀 Server running at http://localhost:${PORT}`);
+app.listen(process.env.PORT || 5000, () => {
+  console.log(`🚀 Server running`);
 });

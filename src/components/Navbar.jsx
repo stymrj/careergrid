@@ -45,6 +45,8 @@ export default function Navbar() {
           ))}
         </div>
 
+        
+
         {/* Mobile Hamburger */}
         <div className="md:hidden">
           <button onClick={() => setMenuOpen(!menuOpen)} className="text-gray-700 focus:outline-none">

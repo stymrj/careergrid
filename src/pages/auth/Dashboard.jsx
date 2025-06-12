@@ -106,6 +106,17 @@ export default function Dashboard() {
           Save Profile
         </button>
 
+        <button
+  onClick={() => {
+    localStorage.removeItem('careergrid-user');
+    navigate('/login');
+  }}
+  className="text-sm text-red-600 hover:underline"
+>
+  Logout
+</button>
+
+
         {/* Visual Link Preview */}
         <div className="mt-10">
           <h2 className="text-xl font-semibold mb-4 text-gray-800">🔗 Preview</h2>

@@ -7,16 +7,36 @@ export default function Login() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  const handleSubmit = async (e) => {
+  e.preventDefault();
 
-    if (email && password) {
-      localStorage.setItem('careergrid-user', JSON.stringify({ email }));
+  if (!email || !password) {
+    return alert('Please enter email and password');
+  }
+
+  try {
+    const res = await fetch('https://careergrid-backend.onrender.com/api/auth/login', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({ email, password })
+    });
+
+    const data = await res.json();
+
+    if (data.success) {
+      localStorage.setItem('careergrid-user', JSON.stringify(data.user));
       navigate('/dashboard');
     } else {
-      alert('Please enter email and password');
+      alert(data.error || 'Login failed');
     }
-  };
+  } catch (err) {
+    alert('Something went wrong');
+    console.error(err);
+  }
+};
+
 
   return (
     <div className="min-h-screen flex flex-col md:flex-row">
