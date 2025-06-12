@@ -1,8 +1,17 @@
-exports.getDashboard = (req, res) => {
-  res.json(req.user);
+const User = require('../models/User');
+
+exports.getProfile = async (req, res) => {
+  const user = await User.findById(req.user.id).select('-password');
+  res.json(user);
 };
 
 exports.updateProfile = async (req, res) => {
-  const updated = await User.findByIdAndUpdate(req.user._id, req.body, { new: true });
-  res.json(updated);
+  const { links, resumeUrl } = req.body;
+  const user = await User.findByIdAndUpdate(
+    req.user.id,
+    { $set: { links, resumeUrl } },
+    { new: true }
+  ).select('-password');
+
+  res.json(user);
 };

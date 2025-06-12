@@ -2,24 +2,31 @@ const mongoose = require('mongoose');
 const bcrypt = require('bcrypt');
 
 const userSchema = new mongoose.Schema({
-  name: String,
-  email: { type: String, unique: true },
-  phone: String,
-  username: { type: String, unique: true },
-  password: String,
+  name: { type: String, required: true },
+  username: { type: String, required: true, unique: true },
+  phone: { type: String, required: true },
+  email: { type: String, required: true, unique: true },
+  password: { type: String, required: true },
+
+  // Optional profile fields
   links: {
     linkedin: String,
     github: String,
     leetcode: String,
-    portfolio: String,
+    portfolio: String
   },
-  resumeUrl: String,
+  resumeUrl: String
 });
 
 userSchema.pre('save', async function (next) {
   if (!this.isModified('password')) return next();
-  this.password = await bcrypt.hash(this.password, 10);
+  const salt = await bcrypt.genSalt(10);
+  this.password = await bcrypt.hash(this.password, salt);
   next();
 });
+
+userSchema.methods.matchPassword = async function (enteredPass) {
+  return await bcrypt.compare(enteredPass, this.password);
+};
 
 module.exports = mongoose.model('User', userSchema);
