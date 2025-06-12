@@ -1,8 +1,7 @@
-// server/routes/blogs.js
 const express = require('express');
 const router = express.Router();
 
-let blogs = []; // In-memory (later replace with MongoDB)
+let blogs = [];
 
 router.get('/', (req, res) => {
   res.json(blogs);
@@ -10,21 +9,10 @@ router.get('/', (req, res) => {
 
 router.post('/', (req, res) => {
   const { title, slug, content, coverImage, author, date } = req.body;
-
   if (!title || !slug || !content) {
     return res.status(400).json({ error: 'Missing required fields' });
   }
-
-  const newBlog = {
-    id: blogs.length + 1,
-    title,
-    slug,
-    content,
-    coverImage,
-    author,
-    date
-  };
-
+  const newBlog = { title, slug, content, coverImage, author, date, id: blogs.length + 1 };
   blogs.push(newBlog);
   res.json({ success: true, blog: newBlog });
 });
