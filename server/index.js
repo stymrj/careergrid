@@ -10,7 +10,12 @@ dotenv.config();
 connectDB();
 
 const app = express();
-// … your CORS & express.json() …
+const corsOptions = {
+  origin: ['https://www.careergrid.tech'],
+  credentials: true,
+};
+app.use(cors(corsOptions));
+app.use(express.json());
 
 app.get('/', (_, res) => res.send('✅ Backend running'));
 // ... your requires, middleware, mounts ...
