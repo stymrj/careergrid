@@ -6,6 +6,7 @@ export default function Signup() {
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
     name: '',
+    username: '',
     email: '',
     phone: '',
     password: '',
@@ -67,6 +68,7 @@ export default function Signup() {
 
           {[
             { label: 'Name', type: 'text' },
+            { label: 'Username', type: 'text' },
             { label: 'Email', type: 'email' },
             { label: 'Phone', type: 'tel' },
             { label: 'Password', type: 'password' },
