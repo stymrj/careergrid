@@ -4,8 +4,8 @@ const sendAccessEmail = async (userEmail, userName, productName) => {
   const transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
-      user: "careergrid24@gmail.com", // replace with yours
-      pass: "rbwz jobt lhpw bbff", // your app password
+      user: process.env.EMAIL_USER,
+      pass: process.env.EMAIL_PASS,
     },
   });
 
